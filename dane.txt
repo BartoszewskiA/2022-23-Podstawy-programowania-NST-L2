@@ -1,0 +1,23 @@
+1) 1) 1) 1) #include <iostream>
+2) 2) 2) 2) #include <fstream>
+3) 3) 3) 3) #include <string>
+4) 4) 4) 4) using namespace std;
+5) 5) 5) 5) int main()
+6) 6) 6) 6) {
+7) 7) 7) 7)     fstream plik;
+8) 8) 8) 8)     string s;
+9) 9) 9) 9)     
+10) 10) 10) 10)     plik.open("dane.txt", ios::in);
+11) 11) 11) 11)     if (!plik.good()) // plik.good()==false
+12) 12) 12) 12)     {
+13) 13) 13) 13)         cout << "Blad pliku";
+14) 14) 14) 14)         return 0;
+15) 15) 15) 15)     }
+16) 16) 16) 16)     while (!plik.eof())
+17) 17) 17) 17)     {
+18) 18) 18) 18)         getline(plik, s);
+19) 19) 19) 19)         cout << s << endl;
+20) 20) 20) 20)     }
+21) 21) 21) 21)     plik.close();
+22) 22) 22) 22)     return 0;
+23) 23) 23) 23) }
